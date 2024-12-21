@@ -3,6 +3,11 @@ const cheerio = require("cheerio");
 const cors = require("cors");
 
 module.exports = async (req, res) => {
+  // Root route handler (http://localhost:3000/)
+  if (req.method === 'GET' && req.url === '/') {
+    return res.json({ message: "Welcome to the GFG API!" });
+  }
+
   // Allow cross-origin requests
   cors()(req, res, async () => {
     const { username } = req.query;

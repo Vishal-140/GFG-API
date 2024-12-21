@@ -2,7 +2,6 @@
   "name": "gfgapi",
   "version": "1.0.0",
   "description": "An API for fetching GeeksforGeeks profile details.",
-  "main": "index.js",
   "scripts": {
     "start": "vercel dev"
   },

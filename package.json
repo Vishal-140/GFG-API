@@ -1,10 +1,12 @@
 {
   "name": "gfgapi",
   "version": "1.0.0",
+  "description": "An API for fetching GeeksforGeeks profile details.",
   "main": "index.js",
   "scripts": {
     "start": "vercel dev"
   },
+  "author": "Vishal Kumar Chaurasia",
   "dependencies": {
     "axios": "^1.7.9",
     "cheerio": "^1.0.0",

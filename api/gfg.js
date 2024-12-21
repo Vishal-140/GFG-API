@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
   // Allow cross-origin requests
   cors()(req, res, async () => {
     const { username } = req.query;
-    
+
     if (!username) {
       return res.status(400).json({ error: "Username is required" });
     }
@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
         const codingScore = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div._userName__head_userDetailsSection_section1__2fMAG > div > div.userDetails_head_right__YQBLH > div > div.scoreCards_head__G_uNQ > div:nth-child(1) > div:nth-child(1) > div.scoreCard_head_left--score__oSi_x").eq(0).text().trim() || "0";
         const problemsSolved = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div._userName__head_userDetailsSection_section1__2fMAG > div > div.userDetails_head_right__YQBLH > div > div.scoreCards_head__G_uNQ > div:nth-child(3) > div:nth-child(1) > div.scoreCard_head_left--score__oSi_x").eq(0).text().trim() || "0";
         const submissions = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.heatMapAndLineChart_head__kvZtS > div.heatMapCard_head__QlR7_ > div.heatMapHeader_head__HLQSQ > div.heatMapHeader_head_left__URMdZ").eq(1).text().trim() || "0";
-        
+
         const school = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.solvedProblemContainer_head__ZyIn0 > div.solvedProblemSection_head__VEUg4 > div.problemNavbar_head__cKSRi > div:nth-child(1) > div").eq(0).text().trim() || "0";
         const basic = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.solvedProblemContainer_head__ZyIn0 > div.solvedProblemSection_head__VEUg4 > div.problemNavbar_head__cKSRi > div.problemNavbar_head_nav__a4K6P.problemNavbar_head_active__i_qqT > div").eq(0).text().trim() || "0";
         const easy = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.solvedProblemContainer_head__ZyIn0 > div.solvedProblemSection_head__VEUg4 > div.problemNavbar_head__cKSRi > div:nth-child(2) > div").eq(0).text().trim() || "0";
@@ -60,6 +60,6 @@ module.exports = async (req, res) => {
     }
 
     const profileData = await fetchGFGProfile(username);
-    return res.json(profileData);  // Send the profile data as JSON response
+    return res.json(profileData); // Send the profile data as JSON response
   });
 };

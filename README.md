@@ -1,3 +1,3 @@
 # GFG-API
 
-# GeeksForGeeksAPI
+# https://geeksforgeeksapi.vercel.app/api/gfg?username=YOURUSERNAME

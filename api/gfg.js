@@ -41,8 +41,6 @@ module.exports = async (req, res) => {
         const hard = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.solvedProblemContainer_head__ZyIn0 > div.solvedProblemSection_head__VEUg4 > div.problemNavbar_head__cKSRi > div:nth-child(5) > div").eq(0).text().trim() || "0";
         const streak = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div._userName__head_userDetailsSection_section1__2fMAG > div > div.userDetails_head_left__YzUgU > div.potdContainer_head__7bGe7 > div:nth-child(2) > div > div.toolTip_tooltip_head__U3klv > div.circularProgressBar_head_mid__IKjUN > div.circularProgressBar_head_mid_streakCnt__MFOF1.tooltipped").text().trim() || "0";
 
-        const heatmap = $("#comp > div.AuthLayout_outer_div__20rxz > div > div.AuthLayout_head_content__ql3r2 > div > div > div.heatMapAndLineChart_head__kvZtS > div.heatMapCard_head__QlR7_");
-
         return {
           username,
           globalRank,
@@ -59,7 +57,6 @@ module.exports = async (req, res) => {
           easy,
           medium,
           hard,
-          heatmap,
         };
       } catch (error) {
         console.error("Error fetching GFG profile:", error.message);
